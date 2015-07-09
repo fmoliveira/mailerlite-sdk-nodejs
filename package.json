@@ -1,5 +1,5 @@
 {
-  "name": "mailerlite-sdk-nodejs",
+  "name": "mailerlite",
   "version": "0.1.0",
   "description": "Node.js wrapper for MailerLite API.",
   "main": "index.js",
