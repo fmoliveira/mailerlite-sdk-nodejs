@@ -1,6 +1,6 @@
 {
   "name": "mailerlite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js wrapper for MailerLite API.",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,9 @@
   "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs",
   "dependencies": {
     "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bump": "^0.3.1"
   }
 }

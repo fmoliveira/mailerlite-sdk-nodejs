@@ -1,3 +1,5 @@
+'use strict';
+
 /* Mailer Lite configuration. */
 var config = require('./config');
 

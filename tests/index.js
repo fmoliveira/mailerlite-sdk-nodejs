@@ -1,3 +1,5 @@
+'use strict';
+
 /* Very rudimentary tests of MailerLite API. */
 var MailerLite = require('../index');
 
@@ -7,7 +9,21 @@ var apiKey = process.env.MAILERLITE_KEY;
 /* Creates a new instance of MaillerLite wrapper passing my API key. */
 var ML = new MailerLite(apiKey);
 
+/* Get details from a given list. */
+function test_listDetails (id) {
+	console.info('== listDetails ==========');
+	ML.Lists.listDetails(id, function (err, data) {
+		if (err) {
+			throw err;
+		}
+
+		/* Print my list details. */
+		console.log(data);
+	});
+}
+
 /* Get all lists from my account. */
+console.info('== getAllLists ==========');
 ML.Lists.getAllLists(function (err, data) {
 	if (err) {
 		throw err;
@@ -15,4 +31,8 @@ ML.Lists.getAllLists(function (err, data) {
 
 	/* Print all lists from my account. */
 	console.log(data);
+
+	/* Get details from my first list. */
+	var id = data.Results[0].id;
+	test_listDetails(id);
 });
