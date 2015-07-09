@@ -1,0 +1,29 @@
+{
+  "name": "mailerlite-sdk-nodejs",
+  "version": "0.1.0",
+  "description": "Node.js wrapper for MailerLite API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmoliveira/mailerlite-sdk-nodejs.git"
+  },
+  "keywords": [
+    "mailerlite",
+    "mailer",
+    "lite",
+    "email",
+    "marketing"
+  ],
+  "author": "Filipe Oliveira <contato@fmoliveira.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fmoliveira/mailerlite-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs",
+  "dependencies": {
+    "request": "^2.58.0"
+  }
+}
