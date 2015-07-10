@@ -49,12 +49,21 @@ function listDetails (id, callback) {
 	executeGetRequest(uri, callback);
 }
 
+/* Get all active subscribers from a given list. */
+function activeSubscribers (id, callback) {
+	validateRequest(config, callback);
+
+	var uri = config.endpoint + 'lists/' + id + '/active/';
+	executeGetRequest(uri, callback);
+}
+
 /* Export the lists module. */
 module.exports = function Lists (externalConfig) {
 	config = externalConfig;
 
 	return {
 		getAllLists: getAllLists,
-		listDetails: listDetails
+		listDetails: listDetails,
+		activeSubscribers: activeSubscribers
 	};
 };
