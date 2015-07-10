@@ -5,6 +5,7 @@ var config = require('./config');
 
 /* API wrappers. */
 var Lists = require('./api/lists');
+var Subscribers = require('./api/subscribers');
 
 /* Set API key to be used in the next requests. */
 function setApikey (key) {
@@ -16,6 +17,7 @@ module.exports = function MailerLite (apiKey) {
 	config.apiKey = apiKey;
 
 	return {
-		Lists: new Lists(config)
+		Lists: new Lists(config),
+		Subscribers: new Subscribers(config)
 	}
 };
