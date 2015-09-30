@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 /* Dependencies. */
 var request = require('request');
@@ -39,7 +39,7 @@ function getAllLists (callback) {
 
 	var uri = config.endpoint + 'lists';
 	executeGetRequest(uri, callback);
-};
+}
 
 /* Get list details. */
 function listDetails (id, callback) {
