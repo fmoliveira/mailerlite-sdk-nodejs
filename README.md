@@ -4,13 +4,9 @@
 
 Node.js wrapper for MailerLite API.
 
-## Description
-
-Playing around with MailerLite API.
-
 ## Disclaimer
 
-Please note this is still a work in progress.
+Work in progress! The API isn't fully covered yet.
 
 [nodei-url]: https://nodei.co/npm/mailerlite/
 [nodei-image]: https://nodei.co/npm/mailerlite.png?mini=true
