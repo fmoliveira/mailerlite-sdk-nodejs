@@ -2,17 +2,19 @@
 
 var restify = require('restify');
 
+var config = require('./config');
+
 var Campaigns = require('./lib/campaigns'),
-	Lists = require('./lib/lists'),
-	Subscribers = require('./lib/subscribers');
+    Lists = require('./lib/lists'),
+    Subscribers = require('./lib/subscribers');
 
 module.exports = MailerLite;
 
 function MailerLite () {
-	this.client = restify.createJsonClient({
-		url: config.url
-	});
-};
+    this.client = restify.createJsonClient({
+        url: config.url
+    });
+}
 
 MailerLite.prototype.Campaigns = Campaigns;
 
