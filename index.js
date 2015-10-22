@@ -28,15 +28,32 @@ function MailerLite (apiKey) {
 function ApiClient (credentials) {
     let self = this;
 
+    /* Make an uri with the api key. */
     let makeUri = (method) => {
         let uri = method;
         uri + '?apiKey=' + credentials.apiKey;
         return uri;
     };
 
+    /* Initialise restify client. */
     let client = restify.createJsonClient({
         url: Config.url
     });
 
+    /* Restify get verb. */
     self.get = (method, cb) => client.get(makeUri(method), cb);
+
+    /* Returns a promise to a given verb. */
+    self.promise = (verb, method) => {
+        let promise = new Promise((resolve, reject) => {
+            self[verb](method, (err, req, res, data) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+        return promise;
+    };
 }
