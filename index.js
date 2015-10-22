@@ -9,20 +9,20 @@ var Config = require('./config'),
 
 module.exports = MailerLite;
 
-function MailerLite (options) {
+function MailerLite (apiKey) {
     var self = this;
 
     self.credentials = {
-        apiKey: options.apiKey
+        apiKey: apiKey || process.env.MAILERLITE_API_KEY
     };
 
     self.client = restify.createJsonClient({
         url: Config.url
     });
 
-    self.Campaigns = Campaigns(self.client);
+    self.Campaigns = new Campaigns(self.client);
 
-    self.Lists = Lists(self.client);
+    self.Lists = new Lists(self.client, self.credentials.apiKey);
 
-    self.Subscribers = Subscribers(self.client);
+    self.Subscribers = new Subscribers(self.client);
 }
