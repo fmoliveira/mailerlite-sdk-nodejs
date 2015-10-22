@@ -16,13 +16,13 @@ function MailerLite (apiKey) {
         apiKey: apiKey || process.env.MAILERLITE_API_KEY
     };
 
-    self.Api = new ApiClient(credentials);
+    let api = new ApiClient(credentials);
 
-    self.Campaigns = new Campaigns(self.Api);
+    self.Campaigns = new Campaigns(api);
 
-    self.Lists = new Lists(self.Api);
+    self.Lists = new Lists(api);
 
-    self.Subscribers = new Subscribers(self.Api);
+    self.Subscribers = new Subscribers(api);
 }
 
 function ApiClient (credentials) {
