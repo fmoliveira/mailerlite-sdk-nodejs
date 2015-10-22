@@ -40,13 +40,10 @@ function ApiClient (credentials) {
         url: Config.url
     });
 
-    /* Restify get verb. */
-    self.get = (method, cb) => client.get(makeUri(method), cb);
-
     /* Returns a promise to a given verb. */
-    self.promise = (verb, method) => {
+    let promise = (verb, method) => {
         let promise = new Promise((resolve, reject) => {
-            self[verb](method, (err, req, res, data) => {
+            client[verb](makeUri(method), (err, req, res, data) => {
                 if (err) {
                     reject(err);
                 } else {
@@ -56,4 +53,7 @@ function ApiClient (credentials) {
         });
         return promise;
     };
+
+    /* API promises. */
+    self.get = (method) => promise('get', method);
 }
