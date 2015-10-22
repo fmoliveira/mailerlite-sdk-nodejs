@@ -1,6 +1,6 @@
 'use strict';
 
-var should = require('should'),
+var expect = require('expect.js'),
     MailerLite = require('..');
 
 describe('Lists', () => {
@@ -10,8 +10,8 @@ describe('Lists', () => {
             .then((data) => {
                 console.log('Success!');
                 console.log(data);
-                data.should.be.ok();
-                data.length.should.be.above(1);
+                expect(data).not.to.be(undefined);
+                expect(data.length).to.be.above(1);
                 done();
             }, (err) => {
                 console.error('Failed');
