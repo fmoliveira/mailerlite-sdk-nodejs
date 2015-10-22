@@ -4,7 +4,7 @@
   "description": "Node.js wrapper for MailerLite API.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/eslint/bin/eslint.js ."
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/fmoliveira/mailerlite-sdk-nodejs/issues"
   },
-  "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs#readme"
+  "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs#readme",
+  "devDependencies": {
+    "eslint": "^1.7.3"
+  }
 }
