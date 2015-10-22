@@ -23,5 +23,8 @@
   "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs#readme",
   "devDependencies": {
     "eslint": "^1.7.3"
+  },
+  "dependencies": {
+    "restify": "^4.0.3"
   }
 }
