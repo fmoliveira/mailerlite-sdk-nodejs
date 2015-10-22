@@ -43,13 +43,17 @@ function ApiClient (credentials) {
     /* Returns a promise to a given verb. */
     let promise = (verb, method) => {
         let promise = new Promise((resolve, reject) => {
-            client[verb](makeUri(method), (err, req, res, data) => {
+            let uri = makeUri(method);
+
+            let cb = (err, req, res, data) => {
                 if (err) {
                     reject(err);
                 } else {
                     resolve(data);
                 }
-            });
+            };
+
+            client[verb](uri, cb);
         });
         return promise;
     };
