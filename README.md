@@ -4,6 +4,8 @@
 
 Node.js wrapper for MailerLite API.
 
+Official documentation: https://docs.mailerlite.com/
+
 ## Disclaimer
 
 Work in progress! The API isn't fully covered yet.
