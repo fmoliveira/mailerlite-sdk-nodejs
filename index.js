@@ -31,7 +31,7 @@ function ApiClient (credentials) {
     /* Make an uri with the api key. */
     let makeUri = (method) => {
         let uri = method;
-        uri + '?apiKey=' + credentials.apiKey;
+        uri = uri + '?apiKey=' + credentials.apiKey;
         return uri;
     };
 
