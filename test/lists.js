@@ -9,7 +9,8 @@ describe('Lists', () => {
         client.Lists.getAll()
         .then((data) => {
             expect(data).not.to.be(undefined);
-            expect(data.length).to.be.above(1);
+            expect(data).to.have.property('Results');
+            expect(data.Results.length).to.be.above(1);
             done();
         });
     });

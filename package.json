@@ -27,6 +27,6 @@
     "mocha": "^2.3.3"
   },
   "dependencies": {
-    "restify": "^4.0.3"
+    "request": "^2.65.0"
   }
 }

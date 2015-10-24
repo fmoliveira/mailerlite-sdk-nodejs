@@ -1,6 +1,6 @@
 'use strict';
 
-var restify = require('restify');
+var request = require('request');
 
 var Config = require('./config'),
     Campaigns = require('./lib/campaigns'),
@@ -28,32 +28,29 @@ function MailerLite (apiKey) {
 function ApiClient (credentials) {
     let self = this;
 
-    /* Make an uri with the api key. */
-    let makeUri = (method) => {
-        let uri = method;
-        uri = uri + '?apiKey=' + credentials.apiKey;
-        return uri;
+    /* Initialise client. */
+    let client = (verb, method, cb) => {
+        let uri = `${Config.url}${method}?apiKey=${credentials.apiKey}`;
+        return request(uri, cb);
     };
-
-    /* Initialise restify client. */
-    let client = restify.createJsonClient({
-        url: Config.url
-    });
 
     /* Returns a promise to a given verb. */
     let promise = (verb, method) => {
         let promise = new Promise((resolve, reject) => {
-            let uri = makeUri(method);
 
-            let cb = (err, req, res, data) => {
+            let cb = (err, res, body) => {
+                let data = JSON.parse(body);
+
                 if (err) {
                     reject(err);
+                } else if (data && data.error) {
+                    reject(data.error);
                 } else {
                     resolve(data);
                 }
             };
 
-            client[verb](uri, cb);
+            client(verb, method, cb);
         });
         return promise;
     };
