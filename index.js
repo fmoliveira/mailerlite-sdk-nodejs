@@ -14,7 +14,7 @@ function MailerLite(apiKey) {
   this.Campaigns = new Campaigns(client);
   this.Lists = new Lists(client);
   this.Subscribers = new Subscribers(client);
-};
+}
 
 /* Export the library. */
 module.exports = MailerLite;
