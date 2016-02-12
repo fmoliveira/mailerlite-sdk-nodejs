@@ -4,7 +4,7 @@
 var Client = require('./lib/client');
 var Campaigns = require('./api/campaigns');
 var Lists = require('./api/lists');
-var Subscribers = require('./api/Subscribers');
+var Subscribers = require('./api/subscribers');
 
 /* Initialiser. */
 function MailerLite(apiKey) {
