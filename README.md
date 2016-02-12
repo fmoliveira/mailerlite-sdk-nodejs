@@ -11,6 +11,8 @@ Official documentation: https://docs.mailerlite.com/
 
 Work in progress! The API isn't fully covered yet.
 
+Please check back again in a few days. :smiley:
+
 [npm-url]: https://npmjs.com/package/mailerlite/
 [npm-image]: https://img.shields.io/npm/dt/mailerlite.svg
 
