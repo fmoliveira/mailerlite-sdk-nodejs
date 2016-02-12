@@ -8,7 +8,6 @@ var Subscribers = require('./api/Subscribers');
 
 /* Initialiser. */
 function MailerLite(apiKey) {
-  var apiKey = apiKey || process.env.MAILERLITE_API_KEY;
   var client = new Client(apiKey);
 
   /* Register submodules. */
