@@ -2,8 +2,8 @@
 
 module.exports = Lists;
 
-function Lists (api) {
-  this.getAll = () => api.get('/lists/');
+function Lists(client) {
+  this.getAll = () => client.Get('/lists/');
 }
 
 Lists.prototype.getDetails = () => {

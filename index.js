@@ -2,17 +2,20 @@
 
 /* Load RESTful client wrapper. */
 var Client = require('./lib/client');
+var Campaigns = require('./api/campaigns');
+var Lists = require('./api/lists');
+var Subscribers = require('./api/Subscribers');
 
 /* Initialiser. */
 function MailerLite(apiKey) {
-  self.ApiKey = apiKey || process.env.MAILERLITE_API_KEY;
-};
+  var apiKey = apiKey || process.env.MAILERLITE_API_KEY;
+  var client = new Client(apiKey);
 
-/* Register submodules. */
-MailerLite.prototype.Client = require('./lib/client');
-MailerLite.prototype.Campaigns = require('./api/campaigns');
-MailerLite.prototype.Lists = require('./api/lists');
-MailerLite.prototype.Subscribers = require('./api/Subscribers');
+  /* Register submodules. */
+  this.Campaigns = new Campaigns(client);
+  this.Lists = new Lists(client);
+  this.Subscribers = new Subscribers(client);
+};
 
 /* Export the library. */
 module.exports = MailerLite;

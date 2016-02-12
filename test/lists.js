@@ -1,12 +1,13 @@
 'use strict';
 
 var expect = require('expect.js');
+
 var MailerLite = require('..');
+var Client = new MailerLite();
 
 describe('Lists', () => {
   it('should return more than one list', (done) => {
-    var client = new MailerLite();
-    client.Lists.getAll()
+    Client.Lists.getAll()
     .then((data) => {
       expect(data).not.to.be(undefined);
       expect(data).to.have.property('Results');
