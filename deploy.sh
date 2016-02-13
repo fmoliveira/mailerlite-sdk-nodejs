@@ -49,5 +49,3 @@ git log -1
 
 # Remove temporary folder
 rimraf
-
-exit 1
