@@ -61,7 +61,7 @@ function Campaigns () {
    * @param {number} [page] - You can navigate through records by increasing page number.
    */
   this.getClicks = (id, limit, page) => {
-    return client.Get(`/campaigns/{id}/clicks/`, {
+    return client.Get(`/campaigns/${id}/clicks/`, {
       limit: limit,
       page: page
     });
