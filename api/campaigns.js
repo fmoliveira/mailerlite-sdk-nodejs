@@ -56,7 +56,10 @@ function Campaigns () {
   };
 
   /**
-   * Get unsubscribes.
+   * Retrieves a paged result representing all the subscribers that unsubscribed from a given campaign.
+   * @param {number} id - The ID of the campaign you want the stats for.
+   * @param {number} [limit] - Sets the limit of results in one page (default 1000).
+   * @param {number} [page] - You can navigate through records by increasing page number.
    */
   this.getUnsubscribes = () => {
     //
