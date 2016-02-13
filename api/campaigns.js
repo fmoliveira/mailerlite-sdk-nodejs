@@ -60,8 +60,11 @@ function Campaigns () {
    * @param {number} [limit] - Sets the limit of results in one page (default 1000).
    * @param {number} [page] - You can navigate through records by increasing page number.
    */
-  this.getClicks = () => {
-    //
+  this.getClicks = (id, limit, page) => {
+    return client.Get(`/campaigns/{id}/clicks/`, {
+      limit: limit,
+      page: page
+    });
   };
 
   /**
