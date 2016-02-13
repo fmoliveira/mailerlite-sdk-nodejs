@@ -9,7 +9,7 @@ module.exports = Lists;
  */
 function Lists(client) {
   /**
-   * Get all lists from your account.
+   * Returns all lists you have in your account. Also basic summary for each list including the ID.
    * @param {number} [limit] - Sets the limit of results in one page (default 1000).
    * @param {number} [page] - You can navigate through records by increasing page number.
    */
@@ -21,7 +21,8 @@ function Lists(client) {
   };
 
   /**
-   * Get details.
+   * Retrieve stats about sent messages.
+   * @param {number} id - The ID of the list you want the stas for.
    */
   this.getDetails = () => {
     //
