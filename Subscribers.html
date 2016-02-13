@@ -189,14 +189,15 @@
 
     
 
-    <h4 class="name" id="addManySubscribers"><span class="type-signature"></span>addManySubscribers<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="addManySubscribers"><span class="type-signature"></span>addManySubscribers<span class="signature">(subscribers, resubscribe)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Add many subscribers.
+    Allows you to add many subscribers to a list in one request, including custom field data if supplied.
+If an email addresses are already subscribed, their name and any custom field values are updated with whatever is passed in.
 </div>
 
 
@@ -205,6 +206,78 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>subscribers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Array of subscribers.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resubscribe</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets to true if you want to reactive subscribers.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -240,7 +313,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line21">line 21</a>
+        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line30">line 30</a>
     </li></ul></dd>
     
 
@@ -271,14 +344,15 @@
 
     
 
-    <h4 class="name" id="addSubscriber"><span class="type-signature"></span>addSubscriber<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="addSubscriber"><span class="type-signature"></span>addSubscriber<span class="signature">(id, email, name, fields, resubscribe)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Add subscriber.
+    Adds a subscriber to an existing list, including custom field data if supplied.
+If the email address is already subscribed, their name and any custom field values are updated with whatever is passed in.
 </div>
 
 
@@ -287,6 +361,147 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list to which the subscriber should be added.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email of the subscriber.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Name of the subscriber.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Array of custom fields of the subscriber.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resubscribe</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets to true if you want to reactive subscriber.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -322,7 +537,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line14">line 14</a>
+        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -353,14 +568,14 @@
 
     
 
-    <h4 class="name" id="deleteSubscriber"><span class="type-signature"></span>deleteSubscriber<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="deleteSubscriber"><span class="type-signature"></span>deleteSubscriber<span class="signature">(id, email)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Delete subscriber.
+    Removes subscriber from a list. He will no longer receive campaigns sent to this list.
 </div>
 
 
@@ -369,6 +584,78 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list to which the subscribed should be removed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email of the subscriber.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -404,7 +691,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line35">line 35</a>
+        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
@@ -435,14 +722,14 @@
 
     
 
-    <h4 class="name" id="getDetails"><span class="type-signature"></span>getDetails<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getDetails"><span class="type-signature"></span>getDetails<span class="signature">(email, history)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get details.
+    Retrieves a subscriber's details including their email address, name, active/inactive state and any custom field data.
 </div>
 
 
@@ -451,6 +738,78 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email address of the subscriber whose details should be retrieved.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>history</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets to true if you want to get historical records of campaigns and autoresponder emails received by a subscriber (default: false).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -486,7 +845,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line28">line 28</a>
+        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line39">line 39</a>
     </li></ul></dd>
     
 
@@ -517,14 +876,14 @@
 
     
 
-    <h4 class="name" id="unsubscribeSubscriber"><span class="type-signature"></span>unsubscribeSubscriber<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="unsubscribeSubscriber"><span class="type-signature"></span>unsubscribeSubscriber<span class="signature">(email)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Unsubscribe subscriber.
+    Marks subscriber as unsubscribed. He will no longer receive any campaigns.
 </div>
 
 
@@ -533,6 +892,55 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email of the subscriber.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -568,7 +976,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line42">line 42</a>
+        <a href="api_subscribers.js.html">api/subscribers.js</a>, <a href="api_subscribers.js.html#line56">line 56</a>
     </li></ul></dd>
     
 
@@ -616,7 +1024,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 12:23:51 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 12:33:34 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
