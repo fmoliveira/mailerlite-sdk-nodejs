@@ -47,7 +47,10 @@ function Subscribers (client) {
    * @param {boolean} history - Sets to true if you want to get historical records of campaigns and autoresponder emails received by a subscriber (default: false).
    */
   this.getDetails = (email, history) => {
-    //
+    return client.Get('/subscribers/', {
+      email: email,
+      history: history
+    });
   };
 
   /**
