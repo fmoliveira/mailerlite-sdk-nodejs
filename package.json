@@ -6,7 +6,7 @@
   "scripts": {
     "make:docs": "node node_modules/jsdoc/jsdoc -c jsdoc.json . -R README.md -d .docs",
     "deploy:docs": "bash deploy.sh",
-    "test": "npm run test:lint && npm run test:mocha",
+    "test": "npm run test:mocha && npm run test:lint",
     "test:lint": "node node_modules/eslint/bin/eslint .",
     "test:mocha": "node node_modules/mocha/bin/mocha"
   },
