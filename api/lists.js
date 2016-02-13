@@ -78,7 +78,10 @@ function Lists(client) {
    * @param {number} page - You can navigate through records by increasing page number.
    */
   this.getUnsubscribedSubscribers = (id, limit, page) => {
-    //
+    return client.Get(`/lists/${id}/unsubscribed/`, {
+      limit: limit,
+      page: page
+    });
   };
 
   /**
