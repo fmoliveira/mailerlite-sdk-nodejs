@@ -41,9 +41,11 @@ function Subscribers () {
   };
 
   /**
-   * Delete subscriber.
+   * Removes subscriber from a list. He will no longer receive campaigns sent to this list.
+   * @param {number} id - The ID of the list to which the subscribed should be removed.
+   * @param {string} email - The email of the subscriber.
    */
-  this.deleteSubscriber = () => {
+  this.deleteSubscriber = (id, email) => {
     //
   };
 
