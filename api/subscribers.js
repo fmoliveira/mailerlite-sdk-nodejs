@@ -29,11 +29,16 @@ function Subscribers (client) {
   /**
    * Allows you to add many subscribers to a list in one request, including custom field data if supplied.
    * If an email addresses are already subscribed, their name and any custom field values are updated with whatever is passed in.
+   * @param {number} list_id - The ID of the list to which the subscriber should be added.
    * @param {object[]} subscribers - Array of subscribers.
    * @param {boolean} resubscribe - Sets to true if you want to reactive subscribers.
    */
-  this.addManySubscribers = (subscribers, resubscribe) => {
-    //
+  this.addManySubscribers = (list_id, subscribers, resubscribe) => {
+    return client.Post(`/subscribers/${list_id}/import`, {
+      id: list_id,
+      subscribers: subscribers,
+      resubscribe: resubscribe
+    });
   };
 
   /**
