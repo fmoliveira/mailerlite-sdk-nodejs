@@ -1,3 +1,6 @@
+# JSDoc output folder
+.docs
+
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
