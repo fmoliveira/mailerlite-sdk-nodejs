@@ -25,7 +25,7 @@ function Campaigns () {
    * @param {number} id - The ID of the campaign you want the stats for.
    */
   this.getDetails = (id) => {
-    //
+    return client.Get(`/campaigns/${id}`);
   };
 
   /**
