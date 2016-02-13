@@ -36,7 +36,7 @@ git -C $OUTPUT_FOLDER rm -rf .
 
 # Build documentation
 ls -l node_modules/
-npm install
+#npm install
 npm run make:docs
 
 # Commit new content and push it
