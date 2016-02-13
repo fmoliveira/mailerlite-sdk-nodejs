@@ -18,9 +18,10 @@ function Campaigns () {
   };
 
   /**
-   * Get details.
+   * Retrieve stats about sent campaign.
+   * @param {number} id - The ID of the campaign you want the stats for.
    */
-  this.getDetails = () => {
+  this.getDetails = (id) => {
     //
   };
 
