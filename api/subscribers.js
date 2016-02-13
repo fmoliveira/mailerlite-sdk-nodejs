@@ -50,9 +50,10 @@ function Subscribers () {
   };
 
   /**
-   * Unsubscribe subscriber.
+   * Marks subscriber as unsubscribed. He will no longer receive any campaigns.
+   * @param {string} email - The email of the subscriber.
    */
-  this.unsubscribeSubscriber = () => {
+  this.unsubscribeSubscriber = (email) => {
     //
   };
 }
