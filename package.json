@@ -4,6 +4,7 @@
   "description": "Node.js wrapper for MailerLite API.",
   "main": "index.js",
   "scripts": {
+    "make:docs": "node node_modules/jsdoc/jsdoc . api/*.js lib/*.js",
     "test": "npm run test:lint && npm run test:mocha",
     "test:lint": "node node_modules/eslint/bin/eslint .",
     "test:mocha": "node node_modules/mocha/bin/mocha"
@@ -26,6 +27,7 @@
   "devDependencies": {
     "eslint": "^1.7.3",
     "expect.js": "^0.3.1",
+    "jsdoc": "^3.4.0",
     "mocha": "^2.3.3"
   },
   "dependencies": {
