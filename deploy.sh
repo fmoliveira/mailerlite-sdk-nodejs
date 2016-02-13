@@ -35,8 +35,6 @@ git clone -b gh-pages --single-branch $REPOSITORY_URL $OUTPUT_FOLDER
 git -C $OUTPUT_FOLDER rm -rf .
 
 # Build documentation
-ls -l node_modules/
-#npm install
 npm run make:docs
 
 # Commit new content and push it
