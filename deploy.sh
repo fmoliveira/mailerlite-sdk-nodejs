@@ -43,6 +43,7 @@ git -C $OUTPUT_FOLDER config user.name "$AUTHOR_NAME"
 git -C $OUTPUT_FOLDER config user.email "$AUTHOR_EMAIL"
 git -C $OUTPUT_FOLDER commit -m "$COMMIT_MSG"
 git -C $OUTPUT_FOLDER log -1
+git -C $OUTPUT_FOLDER config push.default simple
 git -C $OUTPUT_FOLDER push
 
 # Remove temporary folder
