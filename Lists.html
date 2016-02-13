@@ -320,14 +320,14 @@
 
     
 
-    <h4 class="name" id="getActiveSubscribers"><span class="type-signature"></span>getActiveSubscribers<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getActiveSubscribers"><span class="type-signature"></span>getActiveSubscribers<span class="signature">(id, limit, page)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get active subscribers.
+    Returns all active subscribers in a given list.
 </div>
 
 
@@ -336,6 +336,101 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want stats for.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets the limit of results in one page (default 1000).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">You can navigate through records by increasing page number.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -371,7 +466,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line58">line 58</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line62">line 62</a>
     </li></ul></dd>
     
 
@@ -578,14 +673,14 @@
 
     
 
-    <h4 class="name" id="getBouncedSubscribers"><span class="type-signature"></span>getBouncedSubscribers<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getBouncedSubscribers"><span class="type-signature"></span>getBouncedSubscribers<span class="signature">(id, limit, page)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get bounced subscribers.
+    Returns all bounced subscribers in a given list.
 </div>
 
 
@@ -594,6 +689,101 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want stats for.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets the limit of results in one page (default 1000).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">You can navigate through records by increasing page number.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -629,7 +819,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line65">line 65</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line82">line 82</a>
     </li></ul></dd>
     
 
@@ -791,14 +981,14 @@
 
     
 
-    <h4 class="name" id="removeList"><span class="type-signature"></span>removeList<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getUnsubscribedSubscribers"><span class="type-signature"></span>getUnsubscribedSubscribers<span class="signature">(id, limit, page)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Remove list.
+    Returns all unsubscribed subscribers in a given list.
 </div>
 
 
@@ -807,6 +997,101 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want stats for.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets the limit of results in one page (default 1000).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">You can navigate through records by increasing page number.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -842,7 +1127,138 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line51">line 51</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line72">line 72</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeList"><span class="type-signature"></span>removeList<span class="signature">(id)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Delete the list
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want to remove.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line52">line 52</a>
     </li></ul></dd>
     
 
@@ -1044,7 +1460,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 11:37:51 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 12:23:51 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
