@@ -27,6 +27,9 @@ git -C $OUTPUT_FOLDER add --all .
 # Do commit
 git -C $OUTPUT_FOLDER commit -m "Deploy to GitHub pages." --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
 
+# Log commit
+git -C $OUTPUT_FOLDER log -1
+
 # Push
 git -C $OUTPUT_FOLDER push
 
