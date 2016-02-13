@@ -25,7 +25,7 @@ function Lists(client) {
    * @param {number} id - The ID of the list you want the stas for.
    */
   this.getDetails = (id) => {
-    return client.Get(`/lists/{$id}`);
+    return client.Get(`/lists/${id}`);
   };
 
   /**
