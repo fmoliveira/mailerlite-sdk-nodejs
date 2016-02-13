@@ -6,7 +6,7 @@ module.exports = Lists;
  * Lists.
  */
 function Lists(client) {
-  /*
+  /**
    * Get all lists from your account.
    */
   this.getAll = () => client.Get('/lists/');
