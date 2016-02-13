@@ -34,4 +34,4 @@ git -C $OUTPUT_FOLDER log -1
 git -C $OUTPUT_FOLDER push
 
 # Remove temporary folder
-rm -rf $OUTPUT_FOLDER
+#rm -rf $OUTPUT_FOLDER
