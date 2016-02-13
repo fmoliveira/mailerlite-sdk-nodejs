@@ -65,7 +65,10 @@ function Lists(client) {
    * @param {number} page - You can navigate through records by increasing page number.
    */
   this.getActiveSubscribers = (id, limit, page) => {
-    //
+    return client.Get(`/lists/${id}/active/`, {
+      limit: limit,
+      page: page
+    });
   };
 
   /**
