@@ -6,8 +6,8 @@ REPOSITORY="https://$GITHUB_DEPLOY_CREDENTIALS@github.com/fmoliveira/mailerlite-
 OUTPUT_FOLDER=".docs"
 CONFIG_NAME=`git config user.name`
 CONFIG_EMAIL=`git config user.email`
-AUTHOR_NAME=${GITHUB_DEPLOY_AUTHOR_NAME:CONFIG_NAME}
-AUTHOR_EMAIL=${GITHUB_DEPLOY_AUTHOR_EMAIL:CONFIG_EMAIL}
+AUTHOR_NAME=${GITHUB_DEPLOY_AUTHOR_NAME:-CONFIG_NAME}
+AUTHOR_EMAIL=${GITHUB_DEPLOY_AUTHOR_EMAIL:-CONFIG_EMAIL}
 
 # Remove output folder if already being used
 rm -rf $OUTPUT_FOLDER
@@ -24,12 +24,8 @@ npm run make:docs
 # Add new content
 git -C $OUTPUT_FOLDER add --all .
 
-# Set author info
-git -C config user.name $AUTHOR_NAME
-git -C config user.email $AUTHOR_EMAIL
-
 # Do commit
-git -C $OUTPUT_FOLDER commit -m "Deploy to GitHub pages."
+git -C $OUTPUT_FOLDER commit -m "Deploy to GitHub pages." --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
 
 # Push
 git -C $OUTPUT_FOLDER push
