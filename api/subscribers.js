@@ -22,7 +22,7 @@ function Subscribers (client) {
       email: email,
       name: name,
       fields: fields,
-      resubscribe: resubscribe
+      resubscribe: resubscribe ? 1 : 0
     });
   };
 
@@ -37,7 +37,7 @@ function Subscribers (client) {
     return client.Post(`/subscribers/${list_id}/import`, {
       id: list_id,
       subscribers: subscribers,
-      resubscribe: resubscribe
+      resubscribe: resubscribe ? 1 : 0
     });
   };
 
