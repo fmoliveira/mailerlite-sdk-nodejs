@@ -6,14 +6,18 @@
 
 Node.js wrapper for MailerLite API.
 
-* Module documentation: http://fmoliveira.com.br/mailerlite-sdk-nodejs/
-* API documentation: https://docs.mailerlite.com/
-
 ## Disclaimer
 
 Work in progress!
 
 The API is already fully covered but there aren't enough tests to say it's stable.
+
+## Usage
+
+## Documentation
+
+* Module documentation: http://fmoliveira.com.br/mailerlite-sdk-nodejs/
+* API documentation: https://docs.mailerlite.com/
 
 ## License
 MIT.
