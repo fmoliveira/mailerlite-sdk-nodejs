@@ -25,8 +25,8 @@ npm run make:docs
 git -C $OUTPUT_FOLDER add --all .
 
 # Set author info
-git config user.name $AUTHOR_NAME
-git config user.email $AUTHOR_EMAIL
+git -C config user.name $AUTHOR_NAME
+git -C config user.email $AUTHOR_EMAIL
 
 # Do commit
 git -C $OUTPUT_FOLDER commit -m "Deploy to GitHub pages."
