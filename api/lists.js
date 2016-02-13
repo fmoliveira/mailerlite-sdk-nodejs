@@ -37,7 +37,9 @@ function Lists(client) {
   };
 
   /**
-   * Update list.
+   * Update existing list.
+   * @param {number} id - The ID of the list you want to change.
+   * @param {string} name - The new name of the list you want to change.
    */
   this.updateList = () => {
     //
