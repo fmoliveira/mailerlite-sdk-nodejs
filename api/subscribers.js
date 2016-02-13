@@ -7,7 +7,7 @@ module.exports = Subscribers;
  * @constructor
  * @param {Client} client - Instance of an API client.
  */
-function Subscribers () {
+function Subscribers (client) {
   /**
    * Adds a subscriber to an existing list, including custom field data if supplied.
    * If the email address is already subscribed, their name and any custom field values are updated with whatever is passed in.
