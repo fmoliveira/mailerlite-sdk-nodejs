@@ -6,12 +6,12 @@ var MailerLite = require('..');
 var Client = new MailerLite();
 
 describe('Lists', () => {
-  it('should return at least one list', (done) => {
+  it('should return an array', (done) => {
     Client.Lists.getAll()
     .then((data) => {
       expect(data).not.to.be(undefined);
       expect(data).to.have.property('Results');
-      expect(data.Results.length).to.be.above(0);
+      expect(data.Results).to.be.an('array');
       done();
     });
   });
