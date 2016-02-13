@@ -10,8 +10,6 @@ else
   REPOSITORY_URL="https://$GITHUB_DEPLOY_CREDENTIALS@github.com/$REPOSITORY_NAME.git"
 fi
 
-echo "Repository: $REPOSITORY_URL"
-
 OUTPUT_FOLDER=".docs"
 CONFIG_NAME=`git config user.name`
 CONFIG_EMAIL=`git config user.email`
@@ -24,6 +22,7 @@ else
   COMMIT_MSG="Automatic deployment to GitHub Pages via Travis CI build number #$TRAVIS_BUILD_NUMBER."
 fi
 
+echo "Preparing to write commit in GitHub Pages..."
 echo $COMMIT_MSG
 
 # Remove output folder if already being used
