@@ -9,8 +9,10 @@ module.exports = Campaigns;
  */
 function Campaigns () {
   /**
-   * Get all.
-   */  
+   * Get all campaigns from your account.
+   * @param {number} [limit] - Sets the limit of results in one page (default 1000).
+   * @param {number} [page] - You can navigate through records by increasing page number.
+   */
   this.getAll = () => {
     //
   };
