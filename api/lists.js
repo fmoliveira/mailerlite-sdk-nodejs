@@ -46,7 +46,8 @@ function Lists(client) {
   };
 
   /**
-   * Remove list.
+   * Delete the list
+   * @param {number} id - The ID of the list you want to remove.
    */
   this.removeList = () => {
     //
