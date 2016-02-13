@@ -4,7 +4,7 @@
   "description": "Node.js wrapper for MailerLite API.",
   "main": "index.js",
   "scripts": {
-    "make:docs": "node node_modules/jsdoc/jsdoc -c jsdoc.json . -d .docs",
+    "make:docs": "node node_modules/jsdoc/jsdoc -c jsdoc.json . -R README.md -d .docs",
     "deploy:docs": "bash deploy.sh",
     "test": "npm run test:lint && npm run test:mocha",
     "test:lint": "node node_modules/eslint/bin/eslint .",
