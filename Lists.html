@@ -189,14 +189,14 @@
 
     
 
-    <h4 class="name" id="addList"><span class="type-signature"></span>addList<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="addList"><span class="type-signature"></span>addList<span class="signature">(name)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Add list.
+    Create new list.
 </div>
 
 
@@ -205,6 +205,55 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the new list you want to create.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -240,7 +289,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line26">line 26</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line35">line 35</a>
     </li></ul></dd>
     
 
@@ -322,7 +371,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line47">line 47</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line58">line 58</a>
     </li></ul></dd>
     
 
@@ -353,14 +402,14 @@
 
     
 
-    <h4 class="name" id="getAll"><span class="type-signature"></span>getAll<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getAll"><span class="type-signature"></span>getAll<span class="signature">(limit<span class="signature-attributes">opt</span>, page<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get all lists from your account.
+    Returns all lists you have in your account. Also basic summary for each list including the ID.
 </div>
 
 
@@ -369,6 +418,100 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Sets the limit of results in one page (default 1000).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">You can navigate through records by increasing page number.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -404,7 +547,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line14">line 14</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -486,7 +629,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line54">line 54</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line65">line 65</a>
     </li></ul></dd>
     
 
@@ -517,14 +660,14 @@
 
     
 
-    <h4 class="name" id="getDetails"><span class="type-signature"></span>getDetails<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getDetails"><span class="type-signature"></span>getDetails<span class="signature">(id)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get details.
+    Retrieve stats about sent messages.
 </div>
 
 
@@ -533,6 +676,55 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want the stas for.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -568,7 +760,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line19">line 19</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line27">line 27</a>
     </li></ul></dd>
     
 
@@ -650,7 +842,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line40">line 40</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line51">line 51</a>
     </li></ul></dd>
     
 
@@ -681,14 +873,14 @@
 
     
 
-    <h4 class="name" id="updateList"><span class="type-signature"></span>updateList<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="updateList"><span class="type-signature"></span>updateList<span class="signature">(id, name)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Update list.
+    Update existing list.
 </div>
 
 
@@ -697,6 +889,78 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the list you want to change.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new name of the list you want to change.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -732,7 +996,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line33">line 33</a>
+        <a href="api_lists.js.html">api/lists.js</a>, <a href="api_lists.js.html#line44">line 44</a>
     </li></ul></dd>
     
 
@@ -780,7 +1044,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 11:30:11 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sat Feb 13 2016 11:37:51 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
