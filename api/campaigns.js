@@ -7,7 +7,7 @@ module.exports = Campaigns;
  * @constructor
  * @param {Client} client - Instance of an API client.
  */
-function Campaigns () {
+function Campaigns (client) {
   /**
    * Get all campaigns from your account.
    * @param {number} [limit] - Sets the limit of results in one page (default 1000).
