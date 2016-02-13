@@ -6,7 +6,10 @@ var Campaigns = require('./api/campaigns');
 var Lists = require('./api/lists');
 var Subscribers = require('./api/subscribers');
 
-/* Initialiser. */
+/**
+ * Initialises a new MailerLite client instance.
+ * @param {string} apiKey - Your MailerLite API key.
+ */
 function MailerLite(apiKey) {
   var client = new Client(apiKey);
 
