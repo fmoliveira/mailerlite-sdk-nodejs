@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 
 REPOSITORY_NAME="fmoliveira/mailerlite-sdk-nodejs"
 
@@ -45,7 +45,9 @@ npm run make:docs
 git add --all .
 git commit -m "$COMMIT_MSG" --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
 git log -1
-git push
+#git push
 
 # Remove temporary folder
 rimraf
+
+exit 1
