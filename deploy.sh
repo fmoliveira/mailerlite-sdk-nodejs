@@ -2,10 +2,12 @@
 
 set -e
 
+REPOSITORY_NAME="fmoliveira/mailerlite-sdk-nodejs"
+
 if [ "$GITHUB_DEPLOY_CREDENTIALS" == "" ]; then
-  REPOSITORY_URL="git@github.com:$TRAVIS_REPO_SLUG.git"
+  REPOSITORY_URL="git@github.com:$REPOSITORY_NAME.git"
 else
-  REPOSITORY_URL="https://$GITHUB_DEPLOY_CREDENTIALS@github.com/$TRAVIS_REPO_SLUG.git"
+  REPOSITORY_URL="https://$GITHUB_DEPLOY_CREDENTIALS@github.com/$REPOSITORY_NAME.git"
 fi
 
 echo "Repository: $REPOSITORY_URL"
