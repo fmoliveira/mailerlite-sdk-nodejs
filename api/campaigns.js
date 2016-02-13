@@ -73,8 +73,11 @@ function Campaigns () {
    * @param {number} [limit] - Sets the limit of results in one page (default 1000).
    * @param {number} [page] - You can navigate through records by increasing page number.
    */
-  this.getUnsubscribes = () => {
-    //
+  this.getUnsubscribes = (id, limit, page) => {
+    return client.Get(`/campaigns/${id}/unsubscribes/`, {
+      limit: limit,
+      page: page
+    });
   };
 
   /**
