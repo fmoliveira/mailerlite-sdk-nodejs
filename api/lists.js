@@ -64,6 +64,16 @@ function Lists(client) {
   };
 
   /**
+   * Returns all unsubscribed subscribers in a given list.
+   * @param {number} id - The ID of the list you want stats for.
+   * @param {number} limit - Sets the limit of results in one page (default 1000).
+   * @param {number} page - You can navigate through records by increasing page number.
+   */
+  this.getUnsubscribedSubscribers = (id, limit, page) => {
+    //
+  };
+
+  /**
    * Get bounced subscribers.
    */
   this.getBouncedSubscribers = () => {
