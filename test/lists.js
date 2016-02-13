@@ -15,7 +15,7 @@ describe('Lists', () => {
         expect(data).to.have.property('Results');
         expect(data.Results).to.be.an('array');
         done();
-      })
+      });
   });
 
   it('should create a list and immediately remove it', (done) => {
