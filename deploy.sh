@@ -29,7 +29,7 @@ npm run make:docs
 git add --all .
 git commit -m "Deploy to GitHub pages." --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
 git log -1
-#git push
+git push
 
 # Remove temporary folder
 rimraf
