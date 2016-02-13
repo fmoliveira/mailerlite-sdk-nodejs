@@ -4,6 +4,7 @@ module.exports = Lists;
 
 /**
  * Lists.
+ * @constructor
  */
 function Lists(client) {
   /**

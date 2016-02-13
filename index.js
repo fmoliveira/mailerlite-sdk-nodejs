@@ -8,6 +8,7 @@ var Subscribers = require('./api/subscribers');
 
 /**
  * Initialises a new MailerLite client instance.
+ * @constructor
  * @param {string} apiKey - Your MailerLite API key.
  */
 function MailerLite(apiKey) {
