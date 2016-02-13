@@ -5,6 +5,7 @@ module.exports = Subscribers;
 /**
  * Subscribers.
  * @constructor
+ * @param {Client} client - Instance of an API client.
  */
 function Subscribers () {
   /**

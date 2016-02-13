@@ -5,6 +5,7 @@ module.exports = Lists;
 /**
  * Lists.
  * @constructor
+ * @param {Client} client - Instance of an API client.
  */
 function Lists(client) {
   /**

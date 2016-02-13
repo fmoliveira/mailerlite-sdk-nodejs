@@ -5,6 +5,7 @@ module.exports = Campaigns;
 /**
  * Campaigns.
  * @constructor
+ * @param {Client} client - Instance of an API client.
  */
 function Campaigns () {
   /**
