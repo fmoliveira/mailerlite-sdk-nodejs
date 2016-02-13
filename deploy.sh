@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 
 REPOSITORY_NAME="fmoliveira/mailerlite-sdk-nodejs"
 
