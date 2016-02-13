@@ -69,6 +69,8 @@ function Subscribers (client) {
    * @param {string} email - The email of the subscriber.
    */
   this.unsubscribeSubscriber = (email) => {
-    //
+    return client.Post('/subscribers/unsubscribe/', {
+      email: email
+    });
   };
 }
