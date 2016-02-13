@@ -26,26 +26,26 @@ echo "Preparing to write commit in GitHub Pages..."
 echo $COMMIT_MSG
 
 # Remove output folder if already being used
-alias rimraf="rm -rf $OUTPUT_FOLDER"
-rimraf
+rm -rf $OUTPUT_FOLDER
 
 # Clone GitHub pages
 git clone -b gh-pages --single-branch $REPOSITORY_URL $OUTPUT_FOLDER
 
-# Alias to change Git working dir
-alias git="git -C $OUTPUT_FOLDER"
-
 # Remove old content
-git rm -rf .
+git -C $OUTPUT_FOLDER rm -rf .
 
 # Build documentation
+ls -l node_modules/
+npm install
 npm run make:docs
 
 # Commit new content and push it
-git add --all .
-git commit -m "$COMMIT_MSG" --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
-git log -1
-#git push
+git -C $OUTPUT_FOLDER add --all .
+git -C $OUTPUT_FOLDER config user.name "$AUTHOR_NAME"
+git -C $OUTPUT_FOLDER config user.email "$AUTHOR_EMAIL"
+git -C $OUTPUT_FOLDER commit -m "$COMMIT_MSG"
+git -C $OUTPUT_FOLDER log -1
+#git -C $OUTPUT_FOLDER push
 
 # Remove temporary folder
-rimraf
+rm -rf $OUTPUT_FOLDER
