@@ -8,7 +8,7 @@
     "deploy:docs": "bash deploy.sh",
     "test": "npm run test:mocha && npm run test:lint",
     "test:lint": "node node_modules/eslint/bin/eslint .",
-    "test:mocha": "node node_modules/mocha/bin/mocha"
+    "test:mocha": "node node_modules/mocha/bin/mocha --timeout 5000"
   },
   "repository": {
     "type": "git",
