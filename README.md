@@ -14,6 +14,25 @@ The API is already fully covered but there aren't enough tests to say it's stabl
 
 ## Usage
 
+Install with npm: `npm install --save mailerlite`.
+
+Browse your lists:
+
+```js
+var MailerLite = require('mailerlite');
+var ML = new MailerLite(apiKey);
+ML.Lists.getAll()
+  .then(function(data) {
+    console.log(data);
+  });
+```
+
+Browse the [documentation](http://fmoliveira.com.br/mailerlite-sdk-nodejs/) to read more.
+
+## Compatibility
+
+All methods will return promises. Support for callbacks is planned to be implemented soon.
+
 ## Documentation
 
 * Module documentation: http://fmoliveira.com.br/mailerlite-sdk-nodejs/
