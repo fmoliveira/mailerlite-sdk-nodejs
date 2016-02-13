@@ -31,9 +31,12 @@ function Lists(client) {
   /**
    * Create new list.
    * @param {string} name - The name of the new list you want to create.
+   * @returns {object} - ID and name of the created list.
    */
   this.addList = (name) => {
-    //
+    return client.Post('/lists/', {
+      name: name
+    });
   };
 
   /**
@@ -50,7 +53,7 @@ function Lists(client) {
    * @param {number} id - The ID of the list you want to remove.
    */
   this.removeList = (id) => {
-    //
+    return client.Delete(`/lists/${id}/`);
   };
 
   /**
