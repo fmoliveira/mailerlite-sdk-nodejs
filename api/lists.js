@@ -90,7 +90,10 @@ function Lists(client) {
    * @param {number} limit - Sets the limit of results in one page (default 1000).
    * @param {number} page - You can navigate through records by increasing page number.
    */
-  this.getBouncedSubscribers = () => {
-    //
+  this.getBouncedSubscribers = (id, limit, page) => {
+    return client.Get(`/lists/${id}/bounced/`, {
+      limit: limit,
+      page: page
+    });
   };
 }
