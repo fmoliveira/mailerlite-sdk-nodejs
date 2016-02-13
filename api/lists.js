@@ -45,7 +45,9 @@ function Lists(client) {
    * @param {string} name - The new name of the list you want to change.
    */
   this.updateList = (id, name) => {
-    //
+    return client.Post(`/lists/${id}`, {
+      name: name
+    });
   };
 
   /**
