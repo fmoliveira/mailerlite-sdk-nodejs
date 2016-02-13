@@ -29,7 +29,8 @@ function Lists(client) {
   };
 
   /**
-   * Add list.
+   * Create new list.
+   * @param {string} name - The name of the new list you want to create.
    */
   this.addList = () => {
     //
