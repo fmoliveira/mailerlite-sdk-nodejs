@@ -24,7 +24,7 @@ function Lists(client) {
    * Retrieve stats about sent messages.
    * @param {number} id - The ID of the list you want the stas for.
    */
-  this.getDetails = () => {
+  this.getDetails = (id) => {
     //
   };
 
@@ -32,7 +32,7 @@ function Lists(client) {
    * Create new list.
    * @param {string} name - The name of the new list you want to create.
    */
-  this.addList = () => {
+  this.addList = (name) => {
     //
   };
 
@@ -41,7 +41,7 @@ function Lists(client) {
    * @param {number} id - The ID of the list you want to change.
    * @param {string} name - The new name of the list you want to change.
    */
-  this.updateList = () => {
+  this.updateList = (id, name) => {
     //
   };
 
@@ -49,7 +49,7 @@ function Lists(client) {
    * Delete the list
    * @param {number} id - The ID of the list you want to remove.
    */
-  this.removeList = () => {
+  this.removeList = (id) => {
     //
   };
 
