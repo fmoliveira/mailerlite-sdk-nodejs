@@ -17,7 +17,7 @@ AUTHOR_NAME=${GITHUB_DEPLOY_AUTHOR_NAME:-$CONFIG_NAME}
 AUTHOR_EMAIL=${GITHUB_DEPLOY_AUTHOR_EMAIL:-$CONFIG_EMAIL}
 
 if [ "$TRAVIS_BUILD_NUMBER" == "" ]; then
-  COMMIT_MSG="Deploy to GitHub Pages."
+  COMMIT_MSG="Deployment to GitHub Pages."
 else
   COMMIT_MSG="Automatic deployment to GitHub Pages via Travis CI build number #$TRAVIS_BUILD_NUMBER."
 fi
@@ -42,7 +42,7 @@ npm run make:docs
 
 # Commit new content and push it
 git add --all .
-git commit -m $COMMIT_MSG --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
+git commit -m "$COMMIT_MSG" --author="$AUTHOR_NAME <$AUTHOR_EMAIL>"
 git log -1
 git push
 
