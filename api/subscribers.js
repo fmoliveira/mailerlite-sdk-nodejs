@@ -15,7 +15,7 @@ function Subscribers () {
    * @param {string} email - The email of the subscriber.
    * @param {string} name - Name of the subscriber.
    * @param {object[]} fields - Array of custom fields of the subscriber.
-   * @param {boolean} resubscribe - Sets if you want to reactive subscriber.
+   * @param {boolean} resubscribe - Sets to true if you want to reactive subscriber.
    */
   this.addSubscriber = (id, email, name, fields, resubscribe) => {
     //
@@ -25,16 +25,18 @@ function Subscribers () {
    * Allows you to add many subscribers to a list in one request, including custom field data if supplied.
    * If an email addresses are already subscribed, their name and any custom field values are updated with whatever is passed in.
    * @param {object[]} subscribers - Array of subscribers.
-   * @param {boolean} resubscribe - Sets if you want to reactive subscribers.
+   * @param {boolean} resubscribe - Sets to true if you want to reactive subscribers.
    */
   this.addManySubscribers = (subscribers, resubscribe) => {
     //
   };
 
   /**
-   * Get details.
+   * Retrieves a subscriber's details including their email address, name, active/inactive state and any custom field data.
+   * @param {string} email - The email address of the subscriber whose details should be retrieved.
+   * @param {boolean} history - Sets to true if you want to get historical records of campaigns and autoresponder emails received by a subscriber (default: false).
    */
-  this.getDetails = () => {
+  this.getDetails = (email, history) => {
     //
   };
 
