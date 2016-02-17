@@ -6,12 +6,6 @@
 
 Node.js wrapper for MailerLite API.
 
-## Disclaimer
-
-Work in progress!
-
-The API is already fully covered but there aren't enough tests to say it's stable.
-
 ## Usage
 
 Install with npm: `npm install --save mailerlite`.
