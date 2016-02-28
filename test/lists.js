@@ -38,8 +38,25 @@ describe('Lists', () => {
       .then((data) => ML.Lists.getDetails(data.id))
       .then((data) => {
         expect(data.id).to.be.above(0)
-        expect(data).to.have.property('name')
         expect(data.name).to.be.equal(LIST_NAME)
+        return ML.Lists.removeList(data.id)
+      })
+      .then(() => {
+        done()
+      })
+  })
+
+  it('should check if all expected list details were retrieved', (done) => {
+    ML.Lists.addList(LIST_NAME)
+      .then((data) => ML.Lists.getDetails(data.id))
+      .then((data) => {
+        expect(data.id).to.be.above(0)
+        expect(data).to.have.property('name')
+        expect(data).to.have.property('date')
+        expect(data).to.have.property('updated')
+        expect(data).to.have.property('total')
+        expect(data).to.have.property('unsubscribed')
+        expect(data).to.have.property('bounced')
         return ML.Lists.removeList(data.id)
       })
       .then(() => {
