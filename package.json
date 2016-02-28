@@ -9,7 +9,7 @@
     "test": "npm run test:coveralls && npm run test:lint",
     "test:lint": "standard",
     "test:mocha": "mocha --timeout 10000",
-    "test:istanbul": "istanbul cover _mocha --report lcovonly -- -R spec --timeout 5000",
+    "test:istanbul": "istanbul cover _mocha --report lcovonly -- -R spec --timeout 10000",
     "test:coveralls": "npm run test:istanbul && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
