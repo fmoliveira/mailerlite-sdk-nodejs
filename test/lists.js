@@ -78,7 +78,7 @@ describe('Lists', () => {
   })
 
   it('should return no active subscribers for a new list', (done) => {
-    let list_id = 0;
+    let list_id = 0
 
     ML.Lists.addList(LIST_NAME)
       .then((data) => {
@@ -98,7 +98,7 @@ describe('Lists', () => {
   })
 
   it('should return no unsubscribed subscribers for a new list', (done) => {
-    let list_id = 0;
+    let list_id = 0
 
     ML.Lists.addList(LIST_NAME)
       .then((data) => {
@@ -118,7 +118,7 @@ describe('Lists', () => {
   })
 
   it('should return no bounced subscribers for a new list', (done) => {
-    let list_id = 0;
+    let list_id = 0
 
     ML.Lists.addList(LIST_NAME)
       .then((data) => {
