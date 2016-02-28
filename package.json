@@ -7,7 +7,7 @@
     "make:docs": "jsdoc -c jsdoc.json . -R README.md -d .docs",
     "deploy:docs": "bash deploy.sh",
     "test": "npm run test:mocha && npm run test:lint",
-    "test:lint": "eslint .",
+    "test:lint": "standard",
     "test:mocha": "mocha --timeout 5000"
   },
   "repository": {
@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/fmoliveira/mailerlite-sdk-nodejs#readme",
   "devDependencies": {
-    "eslint": "^1.7.3",
     "expect.js": "^0.3.1",
     "jsdoc": "^3.4.0",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "standard": "^6.0.7"
   },
   "dependencies": {
     "request": "^2.65.0"
