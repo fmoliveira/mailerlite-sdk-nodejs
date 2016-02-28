@@ -3,6 +3,7 @@
 [![NPM package][nodei-image]][nodei-url]
 [![NPM package][npm-image]][npm-url]
 [![Travis Build][travis-image]][travis-url]
+[![Travis Build][coveralls-image]][coveralls-url]
 
 Node.js wrapper for MailerLite API.
 
@@ -43,3 +44,6 @@ MIT.
 
 [travis-url]: https://travis-ci.org/fmoliveira/mailerlite-sdk-nodejs
 [travis-image]: https://api.travis-ci.org/fmoliveira/mailerlite-sdk-nodejs.svg
+
+[coveralls-url]: https://coveralls.io/github/fmoliveira/mailerlite-sdk-nodejs?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/fmoliveira/mailerlite-sdk-nodejs/badge.svg?branch=master
