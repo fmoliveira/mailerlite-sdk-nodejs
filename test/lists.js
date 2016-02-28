@@ -33,6 +33,20 @@ describe('Lists', () => {
       })
   })
 
+  it('should create a list, get its details and remove it', (done) => {
+    ML.Lists.addList(LIST_NAME)
+      .then((data) => ML.Lists.getDetails(data.id))
+      .then((data) => {
+        expect(data.id).to.be.above(0)
+        expect(data).to.have.property('name')
+        expect(data.name).to.be.equal(LIST_NAME)
+        return ML.Lists.removeList(data.id)
+      })
+      .then(() => {
+        done()
+      })
+  })
+
   it('should create a list, rename it, check if renamed, and remove it', (done) => {
     ML.Lists.addList(LIST_NAME)
       .then((data) => ML.Lists.updateList(data.id, LIST_RENAME))
