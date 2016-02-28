@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-module.exports = Lists;
+module.exports = Lists
 
 /**
  * Lists.
  * @constructor
  * @param {Client} client - Instance of an API client.
  */
-function Lists(client) {
+function Lists (client) {
   /**
    * Returns all lists you have in your account. Also basic summary for each list including the ID.
    * @param {number} [limit] - Sets the limit of results in one page (default 1000).
@@ -17,16 +17,16 @@ function Lists(client) {
     return client.Get('/lists/', {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieve stats about sent messages.
    * @param {number} id - The ID of the list you want the stas for.
    */
   this.getDetails = (id) => {
-    return client.Get(`/lists/${id}`);
-  };
+    return client.Get(`/lists/${id}`)
+  }
 
   /**
    * Create new list.
@@ -36,8 +36,8 @@ function Lists(client) {
   this.addList = (name) => {
     return client.Post('/lists/', {
       name: name
-    });
-  };
+    })
+  }
 
   /**
    * Update existing list.
@@ -47,16 +47,16 @@ function Lists(client) {
   this.updateList = (id, name) => {
     return client.Post(`/lists/${id}`, {
       name: name
-    });
-  };
+    })
+  }
 
   /**
    * Delete the list
    * @param {number} id - The ID of the list you want to remove.
    */
   this.removeList = (id) => {
-    return client.Delete(`/lists/${id}/`);
-  };
+    return client.Delete(`/lists/${id}/`)
+  }
 
   /**
    * Returns all active subscribers in a given list.
@@ -68,8 +68,8 @@ function Lists(client) {
     return client.Get(`/lists/${id}/active/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Returns all unsubscribed subscribers in a given list.
@@ -81,8 +81,8 @@ function Lists(client) {
     return client.Get(`/lists/${id}/unsubscribed/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Returns all bounced subscribers in a given list.
@@ -94,6 +94,6 @@ function Lists(client) {
     return client.Get(`/lists/${id}/bounced/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 }

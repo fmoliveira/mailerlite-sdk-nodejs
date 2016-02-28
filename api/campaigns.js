@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-module.exports = Campaigns;
+module.exports = Campaigns
 
 /**
  * Campaigns.
@@ -17,16 +17,16 @@ function Campaigns (client) {
     return client.Get('/campaigns/', {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieve stats about sent campaign.
    * @param {number} id - The ID of the campaign you want the stats for.
    */
   this.getDetails = (id) => {
-    return client.Get(`/campaigns/${id}`);
-  };
+    return client.Get(`/campaigns/${id}`)
+  }
 
   /**
    * Retrieves a paged result representing all the subscribers that a given campaign was sent to.
@@ -38,8 +38,8 @@ function Campaigns (client) {
     return client.Get(`/campaigns/${id}/recipients/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieves a paged result representing all the subscribers that opened a given campaign.
@@ -51,8 +51,8 @@ function Campaigns (client) {
     return client.Get(`/campaigns/${id}/opens/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieves a paged result representing all the subscribers that clicked a given campaign.
@@ -64,8 +64,8 @@ function Campaigns (client) {
     return client.Get(`/campaigns/${id}/clicks/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieves a paged result representing all the subscribers that unsubscribed from a given campaign.
@@ -77,8 +77,8 @@ function Campaigns (client) {
     return client.Get(`/campaigns/${id}/unsubscribes/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 
   /**
    * Retrieves a paged result representing all the subscribers who bounced for a given campaign.
@@ -90,6 +90,6 @@ function Campaigns (client) {
     return client.Get(`/campaigns/${id}/junk/`, {
       limit: limit,
       page: page
-    });
-  };
+    })
+  }
 }

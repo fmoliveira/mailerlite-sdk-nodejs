@@ -1,24 +1,24 @@
-'use strict';
+'use strict'
 
 /* Load RESTful client wrapper. */
-var Client = require('./lib/client');
-var Campaigns = require('./api/campaigns');
-var Lists = require('./api/lists');
-var Subscribers = require('./api/subscribers');
+var Client = require('./lib/client')
+var Campaigns = require('./api/campaigns')
+var Lists = require('./api/lists')
+var Subscribers = require('./api/subscribers')
 
 /**
  * Initialises a new MailerLite client instance.
  * @constructor
  * @param {string} apiKey - Your MailerLite API key.
  */
-function MailerLite(apiKey) {
-  var client = new Client(apiKey);
+function MailerLite (apiKey) {
+  var client = new Client(apiKey)
 
   /* Register submodules. */
-  this.Campaigns = new Campaigns(client);
-  this.Lists = new Lists(client);
-  this.Subscribers = new Subscribers(client);
+  this.Campaigns = new Campaigns(client)
+  this.Lists = new Lists(client)
+  this.Subscribers = new Subscribers(client)
 }
 
 /* Export the library. */
-module.exports = MailerLite;
+module.exports = MailerLite

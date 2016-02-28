@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-module.exports = Subscribers;
+module.exports = Subscribers
 
 /**
  * Subscribers.
@@ -23,8 +23,8 @@ function Subscribers (client) {
       name: name,
       fields: fields,
       resubscribe: resubscribe ? 1 : 0
-    });
-  };
+    })
+  }
 
   /**
    * Allows you to add many subscribers to a list in one request, including custom field data if supplied.
@@ -38,8 +38,8 @@ function Subscribers (client) {
       id: list_id,
       subscribers: subscribers,
       resubscribe: resubscribe ? 1 : 0
-    });
-  };
+    })
+  }
 
   /**
    * Retrieves a subscriber's details including their email address, name, active/inactive state and any custom field data.
@@ -50,8 +50,8 @@ function Subscribers (client) {
     return client.Get('/subscribers/', {
       email: email,
       history: history
-    });
-  };
+    })
+  }
 
   /**
    * Removes subscriber from a list. He will no longer receive campaigns sent to this list.
@@ -61,8 +61,8 @@ function Subscribers (client) {
   this.deleteSubscriber = (list_id, email) => {
     return client.Delete(`/subscribers/${list_id}`, {
       email: email
-    });
-  };
+    })
+  }
 
   /**
    * Marks subscriber as unsubscribed. He will no longer receive any campaigns.
@@ -71,6 +71,6 @@ function Subscribers (client) {
   this.unsubscribeSubscriber = (email) => {
     return client.Post('/subscribers/unsubscribe/', {
       email: email
-    });
-  };
+    })
+  }
 }
