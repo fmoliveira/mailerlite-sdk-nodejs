@@ -76,4 +76,24 @@ describe('Lists', () => {
         done()
       })
   })
+
+  it('should return no active subscribers for a new list', (done) => {
+    let list_id = 0;
+
+    ML.Lists.addList(LIST_NAME)
+      .then((data) => {
+        list_id = data.id
+        return ML.Lists.getActiveSubscribers(list_id)
+      })
+      .then((data) => {
+        expect(data).to.have.property('Page')
+        expect(data.Page).to.be.equal(1)
+        expect(data).to.have.property('Results')
+        expect(data.Results).to.be.an('array')
+        return ML.Lists.removeList(list_id)
+      })
+      .then(() => {
+        done()
+      })
+  })
 })
