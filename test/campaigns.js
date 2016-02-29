@@ -11,7 +11,8 @@ describe('Campaigns', () => {
   it('should return an array', (done) => {
     ML.Campaigns.getAll()
       .then((data) => {
-        expect(data).not.to.be(undefined)
+        expect(data).to.have.property('Page')
+        expect(data.Page).to.be.equal(1)
         expect(data).to.have.property('Results')
         expect(data.Results).to.be.an('array')
         done()
