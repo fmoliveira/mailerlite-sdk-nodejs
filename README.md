@@ -1,5 +1,7 @@
 # MailerLite SDK for Node.js
 
+## **DISCLAIMER: This project is not maintained anymore.**
+
 [![NPM package][nodei-image]][nodei-url]
 [![NPM package][npm-image]][npm-url]
 [![Travis Build][travis-image]][travis-url]
