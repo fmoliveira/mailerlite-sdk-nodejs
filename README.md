@@ -1,6 +1,6 @@
 # MailerLite SDK for Node.js
 
-## **DISCLAIMER: This project is not maintained anymore.**
+## **DISCLAIMER: The MailerLite API has been upgraded with breaking changes, making this library deprecated. This project is not maintained anymore because I'm not using MailerLite anymore.**
 
 [![NPM package][nodei-image]][nodei-url]
 [![NPM package][npm-image]][npm-url]
@@ -28,7 +28,7 @@ Browse the [documentation](http://fmoliveira.com.br/mailerlite-sdk-nodejs/) to r
 
 ## Compatibility
 
-All methods will return promises. Support for callbacks is planned to be implemented soon.
+All methods will return promises.
 
 ## Documentation
 
